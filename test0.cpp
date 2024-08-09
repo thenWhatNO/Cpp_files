@@ -28,7 +28,7 @@ int** set_Snake(){
 	return snake_body;
 }
 
-char** Set_buffer(int x_, int y_, int snake[300][300]){
+char** Set_buffer(int x_, int y_, int** snake){
 	char** C_name = new char*[y_];
 	for(int i = 0; i < y_; ++i){
 		C_name[i] = new char[x_];
@@ -42,7 +42,7 @@ char** Set_buffer(int x_, int y_, int snake[300][300]){
 	return C_name;
 }
 
-void render(int x_, int y_, char C_name[100][30]){
+void render(int x_, int y_, char** C_name){
 	for (int row = 0; row < y_; ++row){
 		for(int col = 1; col < x_; ++col){
 			cout << C_name[row][col];
